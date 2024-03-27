@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sniper Game</title>
+    <link rel="stylesheet" href="gamestyle.css" />
+  </head>
+  <body>
+    <!-- style="enable-background:new 0 0 512 512;" -->
+
+    <div class="top_panel">
+      <button class="home top_panel_ctrls" onclick="toggle_quit_page()">
+        <svg
+          height="30px"
+          width="30px"
+          id="back_btn_svg"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <polygon
+            points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "
+          />
+        </svg>
+      </button>
+      <div class="message_board">SHOOT</div>
+      <div class="timer top_panel_ctrls">
+        <div class="time_title"><h3>TIME:</h3></div>
+        <div class="time_display"><h3>10s</h3></div>
+      </div>
+      <div class="scoreboard top_panel_ctrls">
+        <div class="score_title"><h3>SCORE:</h3></div>
+        <div class="score_display"><h3>0</h3></div>
+      </div>
+
+      <!-- <div class="message_box top_panel_ctrls"></div> -->
+      <!-- <div class="time_toggle top_panel_ctrls"></div> -->
+    </div>
+
+    <div class="main_window" id="main_window">
+      <div class="floor floor1">
+        <!-- <div class="enemy_zone1"></div> -->
+        <div class="levels"></div>
+      </div>
+
+      <div class="floor floor2">
+        <div class="levels"></div>
+      </div>
+    </div>
+
+    <div class="quit_page hide_option" anchor="main_window">
+      <div class="quit_page_actual_menu">
+        <div class="quit_page_text">
+          <div class="quit_prompt_text">
+            <h1>DO YOU REALLY WANT TO QUIT?</h1>
+          </div>
+          <div class="quit_inform">
+            <h2>(your current progress will be lost)</h2>
+          </div>
+        </div>
+        <div class="quit_button_container">
+          <button id="resume" onclick="toggle_quit_page()"><h3>Resume</h3></button>
+          <button id="quit"><h3>Quit</h3></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="score_page hide_option">
+      <div class="score_comment"><h2>AMAZING!!!!</h2></div>
+      <div class="score_comment"><h2>YOUR SCORE IS</h2></div>
+      <div class="final_score"></div>
+    </div>
+
+    <script src="gamescript.js"></script>
+  </body>
+</html>

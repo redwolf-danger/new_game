@@ -1,0 +1,273 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    background-image: url(../assets/main_game_page/cat-han-W_5Eakb1598-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: aliceblue;
+}
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.main_window{
+    min-height:80vh;
+    max-width:880px;
+    border:2px solid gold;
+    position: relative;
+    margin: auto;
+    /* margin-top: ; */
+    background-color: black;
+}
+.enemy :hover{
+    cursor: crosshair;
+}
+.enemy{
+    position:relative;
+    top:10vh;
+    margin:0px;
+}
+
+.levels{
+    position:absolute;
+    background-color: brown;
+    height:10vh;
+    width: 100%;
+    top:30vh;
+}
+.enemy_zone{
+    position:absolute;
+    height:30vh;
+    width:100%;
+}
+.floor{
+    position:relative;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-areas: "ar1 ar2 ar3 ar4 ar5 ar6 ar7 ar8";
+    /* border:2px solid green; */
+    width:99.5%;
+    height:40vh;
+}
+
+.dead{
+    animation: fading_away 1s;
+}
+@keyframes fading_away {
+    10%{
+        opacity:0.9;
+    }
+    20%{
+        opacity:0.8;
+    }
+    30%{
+        opacity:0.7;
+    }
+    40%{
+        opacity:0.6;
+    }
+    50%{
+        opacity:0.5;
+    }
+    60%{
+        opacity:0.4;
+    }
+    70%{
+        opacity:0.3;
+    }
+    80%{
+        opacity:0.2;
+    }
+    90%{
+        opacity:0.1;
+    }
+    100%{
+        opacity:0.0;
+    }
+}
+
+.top_panel{
+    height:13vh;
+    width:100%;
+    /* background-color: rgb(58, 51, 51); */
+    /* border: 2px solid gold; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    gap:30px;
+}
+.top_panel_ctrls
+{
+    background-color: inherit;
+    /* border:2px solid black; */
+    height:30px;
+
+}
+
+.timer{
+    width:150px;
+    /* border:2px solid black; */
+    display: flex;
+}
+.home{
+    border:none;
+    /* background-color: aqua; */
+}
+.home:active{
+    opacity: 0.5;
+}
+.message_board{
+    /* border:2px solid green; */
+    padding:2px;
+    color: green;
+    font-weight: 600;
+}
+/* .headshot_message{
+    color :purple !important;
+}
+.reloading_message{
+    color:red !important;
+} */
+.scoreboard{
+    /* border:2px solid gold; */
+    width:150px;
+    display: flex;
+}
+.score_title{
+    height:100%;
+    width:50%;
+    /* border:1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score_display{
+    height:100%;
+    width:50%;
+    /* border:1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time_title{
+    height:100%;
+    width:50%;
+    /* border:1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time_display{
+    height:100%;
+    width:50%;
+    /* border:1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide_option{
+    visibility:hidden;
+}
+.quit_page{
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    margin: auto;
+
+    min-height:80vh;
+    /* max-width:880px; */
+    width:100%;
+    border:2px solid gold;
+    /*? experimental starts*/
+    position: absolute;
+    /* left: 0px; */
+    top: 13vh;
+    /*? experimental ends  */
+    color:white;
+    /* background-color: black; */
+    opacity:0.9;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20vh;
+}
+.quit_page_text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 700;
+    /* border:2px solid goldenrod; */
+}
+
+.quit_button_container{
+    /* border:2px solid skyblue; */
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+.quit_button_container button{
+    height:40px;
+    width:80px;
+    border-radius: 15px;
+    background-color: black;
+    color:white;
+    border:1px solid white;
+}
+#resume{
+    color:skyblue;
+}
+#quit{
+    color:red;
+}
+button:active{
+    opacity :0.5;
+}
+.score_page{
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    margin: auto;
+
+    min-height:80vh;
+    /* max-width:880px; */
+    width:100%;
+    border:2px solid gold;
+    /*? experimental starts*/
+    position: absolute;
+    /* left: 0px; */
+    top: 13vh;
+    /*? experimental ends  */
+    color:white;
+    /* background-color: black; */
+    opacity:0.9;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap:vh; */
+}
+.score_comment{
+    /* border: 2px solid gold; */
+    color:green;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 700;
+}
+/* -10 to 770px; */
+
